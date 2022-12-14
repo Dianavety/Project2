@@ -1,6 +1,17 @@
-Possible ways to defend against a dos attack  
-dos and ddos attack with simultaneous machines 
-
-threadpooolexecuter crash and bounces back up without it it crashes forever; 
-threadin reach max and drops it with executer it reloads the browser and brings 
-it back up  server reboots once crashed, threader rebootsd it
+This file includes a port scanner and a denial of service attack. The denial of service attack was tested on myself, Paola, Allison, Hamssatou and Larissa. 
+When first tested it took place at ford hall during ta hours and it worked almost immediately. After running it 5 times on Paola's end while my webserver was 
+eunning, after a couple of minutes my webserver was not accesible meaning that the dos attack worked. Then I ran the dos attack against Paola's webserver and
+it was also able to make the webserver inaccessible. We then tested the dos again against the rest of the group at Neilson and it resulted in a different 
+outcome. It was hard for Paola to take down Hamssatou's webserver and we all believed that it was potentially a faster internet connection reponsible as it 
+could potentially process the requests faster. We then had Larissa test the dos attack against my webserver since we knew that mine has crashed before. It 
+took about a lot of times of running the dos attack for it to finally make my webserver inaccessible. After the webserver goes down it took a bit for it to be 
+able to establish a connection and we thought that it could still be processing the previous requests but I'm not sure. We then went to ford hall to test out 
+our internet speed idea but it was still hard to take Hammsatou's webserver down. We then discussed the ways in which we approached building our webserver's 
+since it seemed that some could have just been "stronger" than the other. We noticed that Hammsatou's webbrowser used a threadpoolexecuter. We imagine that 
+with that the webbrpwser would temporarily crash (which is something that we did see at ford hall) but it would bounce back up. Some connections failed but 
+some would also go through so the webserver would only be temporarily down. Once the webbrowser reached a max it would drop the other connections and a 
+possible explanation would be that with the threadpoolexecuter the browser is somehow being reloaded and brought back to accepting requests. Implementing 
+a threadpoolexecuter could be a potential defense against our dos attack. Another attack is a port scanner. I wasn't able to test it on the rest of my group
+but when I ran it it would say that all of my ports were closed. A potential way to protect against this would be to know which ports you have open to assess 
+your own vulnerabilities. I tried comparing my port scanner against some commands that check for open ports but came across some issues. I imagine it would be 
+hard to implement other protections since some ports have to be open for certain applications. 
