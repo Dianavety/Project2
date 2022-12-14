@@ -1,1 +1,6 @@
 Possible ways to defend against a dos attack  
+dos and ddos attack with simultaneous machines 
+
+threadpooolexecuter crash and bounces back up without it it crashes forever; 
+threadin reach max and drops it with executer it reloads the browser and brings 
+it back up  server reboots once crashed, threader rebootsd it
