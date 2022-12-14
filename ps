@@ -1,0 +1,23 @@
+from socket import *
+import sys
+import threading
+
+serverSocket = socket(AF_INET, SOCK_STREAM)
+SERVER = gethostbyname(gethostname())
+
+print(SERVER)
+
+def pscan(PORT):
+    try:
+#make a connection and if connection is established port is open
+        serverSocket.connect((SERVER, PORT))
+
+    except:
+#if port isn't open, connection fails and returns false
+        return False
+
+for i in range(1,65000):
+    if pscan(i):
+        print ('Port',i,'is open')
+    else:
+        print ('Port',i,'is closed')
